@@ -1,3 +1,10 @@
-.navbar {
-    background-color: black;
+#nav{
+    background-color: rgb(43, 156, 87);
+    color: white;
 }
+
+.container-fluid a{
+    color: white;
+}
+
+
