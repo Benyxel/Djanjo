@@ -10,3 +10,27 @@
 }
 
 
+.search{
+    margin-right: 30%;
+}
+.account{
+    margin-right: 20px;
+}
+
+.drtxt a{
+    text-decoration: none;
+    color: rgb(77, 77, 77);
+    font-family: poppins;
+    font-size: medium;
+}
+
+.account .dropdown-divide {
+    color: black;
+}
+
+#hero{
+background-image: url('asserts/hero1.png');
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
