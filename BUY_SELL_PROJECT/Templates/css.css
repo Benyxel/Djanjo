@@ -7,6 +7,7 @@
     --card-height: 100%;
     --card-img-height: 200px;
     --card-img-fit: cover;
+    --font-weight: 500;
 }
 
 #nav {
@@ -136,4 +137,84 @@
 #col img{
     width: 100%;
     
+}
+
+#edc{
+    font-family: var(--font-family);
+    
+    margin-top: -5%;
+    margin-left: 15%;
+    padding: 10px;
+}
+
+/* Video Cards */
+.container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    margin-bottom: 30px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.video-details {
+    padding: 20px;
+}
+
+.video-details h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.video-details p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.video-details a {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    background-color:var(--primary-color2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.video-details a:hover {
+    background-color: #45a049;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-card {
+        width: 100%;
+    }
 }
