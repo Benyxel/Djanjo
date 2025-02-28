@@ -298,6 +298,102 @@
 </div>
 
 
+
+<div id="bking" class="container-fluid p-5">
+  <div class="main-wrapper">
+    <div class="card-wrapper learning-card">
+      <div class="image-section">
+        <img src="https://via.placeholder.com/350x175.png?text=Student+Learning" alt="Student Learning" class="learning-image">
+      </div>
+      <div class="form-section">
+        <h2>Book Your Learning Session</h2>
+        <form id="booking-form">
+          <label for="session-date">Session Date:</label>
+          <input type="date" id="session-date" name="session-date" required>
+  
+          <label for="session-time">Session Time:</label>
+          <input type="time" id="session-time" name="session-time" required>
+  
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" placeholder="e.g., Math, Science" required>
+  
+          <label for="duration">Duration (hours):</label>
+          <input type="number" id="duration" name="duration" min="1" required>
+  
+          <label for="session-type">Session Type:</label>
+          <select id="session-type" name="session-type" required>
+            <option value="online">Online</option>
+            <option value="face-to-face">Face-to-Face</option>
+          </select>
+  
+          <button type="submit">Book Session</button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="card-wrapper cbm-card">
+      <div class="image-section">
+        <img src="https://via.placeholder.com/350x175.png?text=CBM+Calculator" alt="CBM Calculator" class="cbm-image">
+      </div>
+      <div class="form-section">
+        <h2>Calculate Cubic Meters (CBM)</h2>
+        <form id="cbm-form">
+          <label for="length">Length (m):</label>
+          <input type="number" id="length" name="length" min="0" step="0.01" required>
+  
+          <label for="width">Width (m):</label>
+          <input type="number" id="width" name="width" min="0" step="0.01" required>
+  
+          <label for="height">Height (m):</label>
+          <input type="number" id="height" name="height" min="0" step="0.01" required>
+  
+          <button type="submit">Calculate CBM</button>
+        </form>
+        <div id="cbm-result"></div>
+      </div>
+    </div>
+  
+    <div class="card-wrapper rmb-card">
+      <div class="image-section">
+        <img src="https://via.placeholder.com/350x175.png?text=Buy+RMB" alt="Buy RMB" class="rmb-image">
+      </div>
+      <div class="form-section">
+        <h2>Buy RMB</h2>
+        <form id="rmb-form">
+          <label for="account-type">Account Type:</label>
+          <select id="account-type" name="account-type" required>
+            <option value="supplier">Supplier</option>
+            <option value="personal">Personal</option>
+          </select>
+  
+          <label for="currency">Currency:</label>
+          <select id="currency" name="currency" required>
+            <option value="yuan">Yuan</option>
+            <option value="cedis">Cedis</option>
+          </select>
+  
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+  
+          <label for="conversion">Conversion Rate:</label>
+          <input type="text" id="conversion" name="conversion" placeholder="e.g., 1 Yuan = 7.5 Cedis" required>
+  
+          <label for="recipient-account">Recipient Account Details:</label>
+          <input type="text" id="recipient-account" name="recipient-account" required>
+  
+          <label for="qr-code">Upload QR Code:</label>
+          <input type="file" id="qr-code" name="qr-code" accept="image/*" required>
+  
+          <label for="alipay-name">Real Name on Alipay:</label>
+          <input type="text" id="alipay-name" name="alipay-name" required>
+  
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="edc" class="container"><h1><strong>Educational Contents</strong></h1></div>
 
 
@@ -331,6 +427,12 @@
       </div>
   </div>
 </div>
+
+
+
+
+
+
 <!-- Footer section -->
 <footer class="bg-dark text-white text-center text-lg-start">
   <div class="container p-4">
@@ -384,7 +486,35 @@
 </footer>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">document.getElementById('booking-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Learning session booked!');
+      // Add your booking submission logic here
+    });
+    
+    document.getElementById('cbm-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const length = parseFloat(document.getElementById('length').value);
+      const width = parseFloat(document.getElementById('width').value);
+      const height = parseFloat(document.getElementById('height').value);
+      const cbm = length * width * height;
+      document.getElementById('cbm-result').innerText = `CBM: ${cbm.toFixed(2)} m³`;
+    });
+    
+    document.getElementById('amount').addEventListener('input', function() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const conversionRate = parseFloat(document.getElementById('conversion').value);
+      if (!isNaN(amount) && !isNaN(conversionRate)) {
+        const convertedAmount = amount * conversionRate;
+        document.getElementById('converted-amount').value = `Converted: ${convertedAmount.toFixed(2)}`;
+      }
+    });
+    
+    document.getElementById('rmb-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('RMB purchase submitted!');
+      // Add your RMB purchase submission logic here
+    });</script>
 </body>
 </html>
 
