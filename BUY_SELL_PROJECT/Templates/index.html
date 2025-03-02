@@ -104,7 +104,7 @@
           </div>
           <div class="card-body">
             <p class="card-text text-muted" >Still feel like you can't go through the process yourself?</p>
-            <button class="btnbs">Place order Now</button>
+            <button onclick="alert('Not active Now')" class="btnbs">Place order Now</button>
           </div>
         </div>
       </div>
@@ -486,35 +486,8 @@
 </footer>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">document.getElementById('booking-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      alert('Learning session booked!');
-      // Add your booking submission logic here
-    });
-    
-    document.getElementById('cbm-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const length = parseFloat(document.getElementById('length').value);
-      const width = parseFloat(document.getElementById('width').value);
-      const height = parseFloat(document.getElementById('height').value);
-      const cbm = length * width * height;
-      document.getElementById('cbm-result').innerText = `CBM: ${cbm.toFixed(2)} m³`;
-    });
-    
-    document.getElementById('amount').addEventListener('input', function() {
-      const amount = parseFloat(document.getElementById('amount').value);
-      const conversionRate = parseFloat(document.getElementById('conversion').value);
-      if (!isNaN(amount) && !isNaN(conversionRate)) {
-        const convertedAmount = amount * conversionRate;
-        document.getElementById('converted-amount').value = `Converted: ${convertedAmount.toFixed(2)}`;
-      }
-    });
-    
-    document.getElementById('rmb-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      alert('RMB purchase submitted!');
-      // Add your RMB purchase submission logic here
-    });</script>
+  <script src="buySell.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js " ></script>
 </body>
 </html>
 
