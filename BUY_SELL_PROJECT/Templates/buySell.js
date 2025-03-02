@@ -1,4 +1,6 @@
-const  btns = document.querySelector('.btnbs')
+const  btnClick = document.querySelector('.btnbs');
 
-
-btnClick = addEventListener
+function btnAlert() {
+    alert('Button is not Active')
+btnClick.addEventListener('click',btnAlert);
+}
