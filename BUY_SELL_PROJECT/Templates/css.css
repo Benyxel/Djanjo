@@ -147,7 +147,7 @@
     padding: 10px;
 }
 
-/* Video Cards */
+/* TODO Video Cards */
 .container {
     margin-top: 50px;
     width: 100%;
@@ -219,7 +219,7 @@
     }
 }
 
-/* Booking class */
+/* TODO Booking class */
 
 .main-wrapper {
     
@@ -326,7 +326,8 @@
     text-align: center;
   }
   
-  /* Responsive Design */
+  /* TODO Responsive Design */
+
   @media (min-width: 768px) {
     .main-wrapper {
       flex-direction: row;
@@ -339,3 +340,25 @@
       max-width: calc(33.333% - 20px);
     }
   }
+
+  /*TODO CART*/
+  .cart{
+    background-color: #212529;
+    color : #fff;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    position: relative;
+  }
+.cartA{
+    font-size: 16px;
+    background-color: red;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    border-radius: 5px;
+    top: -10px;
+    right: -10px;
+    margin-top: 5px;
+
+}
