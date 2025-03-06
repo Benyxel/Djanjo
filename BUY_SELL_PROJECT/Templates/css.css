@@ -362,3 +362,27 @@
     margin-top: 5px;
 
 }
+
+.cardD{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.cardD1 p h6{
+    font-size: 13px;
+}
+.cardD1 img{
+    width: 30px;
+    height: 30px;
+}
+.rating{
+    color: #45a049;
+    margin-top:20px;
+    display: flex;
+}
+.fa-heart .bi-cart3{
+    color: rgb(247, 118, 5);
+}
+
