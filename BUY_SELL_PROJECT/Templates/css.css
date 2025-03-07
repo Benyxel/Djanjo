@@ -2,6 +2,7 @@
     --primary-color: rgb(43, 156, 87);
     --primary-color2: rgb(87, 158, 114);
     --secondary-color:  #f0f0f0;
+    --secondary-color2: #575757;
     --font-family: 'Poppins', sans-serif;
     --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --card-height: 100%;
@@ -21,19 +22,24 @@
     padding: 1rem;
 }
 .navbar a {
+    font-family: roboto,sans-serif;
+    font-size:18px ;
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
 .navbar a:hover {
-    background-color: #575757;
+    background-color: #06aa7e;
     border-radius: 5px;
+    transition: 0.4s ease-in-out;
+    transform: translateY(-10px)scale(1.03);
 }
 .navbar .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    margin-left: 100px;
 }
 .navbar .menu-icon {
     display: none;
@@ -51,6 +57,7 @@
         display: none;
         flex-direction: column;
         width: 100%;
+        margin-left: 30px;
     }
     .navbar .menu.active {
         display: flex;
@@ -59,6 +66,23 @@
         display: flex;
     }
 }
+
+@media (max-width: 1199px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 30px;
+    }
+    .navbar .menu.active {
+        display: flex;
+    }
+    .navbar .menu-icon {
+        display: flex;
+    }
+}
+
+
 
 
 #hero {
