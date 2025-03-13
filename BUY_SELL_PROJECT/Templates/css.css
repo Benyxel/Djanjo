@@ -11,7 +11,10 @@
     --font-weight: 500;
 }
 
-
+body{
+    padding: 0;
+    margin: 0;
+}
 
 /* todo: navbar */
 .navbar {
@@ -21,7 +24,7 @@
     background-color: #333;
     padding: 1rem;
 }
-.navbar a {
+.navbar a{
     font-family: roboto,sans-serif;
     font-size:18px ;
     color: white;
@@ -29,17 +32,24 @@
     padding: 0.5rem 1rem;
 }
 .navbar a:hover {
-    background-color: #06aa7e;
+    background-color: var(--primary-color2);
     border-radius: 5px;
     transition: 0.4s ease-in-out;
-    transform: translateY(-10px)scale(1.03);
 }
-.navbar .menu {
+.navlist ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+   
+}
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     margin-left: 100px;
+    
 }
 .navbar .menu-icon {
     display: none;
